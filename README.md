@@ -1,2 +1,2 @@
 # Python do Básico
-todos os 100 exercios de python do curso em video 
+Aqui estarão todos os projetos de python de nivel básico
