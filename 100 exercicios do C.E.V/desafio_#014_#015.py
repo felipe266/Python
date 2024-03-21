@@ -21,6 +21,5 @@ for k, v in tabela.items():
     if k =='dias pecorrido':
         preco += 60*v
         tabela['preço'] = preco
-'''for k,v in tabela.items():
-    print(f'{k} é {v}')'''
-print(tabela)
+for k,v in tabela.items():
+    print(f'{k} é {v}')
