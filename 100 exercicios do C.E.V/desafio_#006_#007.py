@@ -1,4 +1,4 @@
-#EXERCÍCIO 6
+#EXERCÍCIO 6: Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada
 num = float(input('Digite um número: ').strip())
 
 dobro = (num*2)
@@ -9,7 +9,7 @@ print(f'o número {num} tem o dobro {dobro} o triplo {triplo} e raiz {raiz:.3f}'
 
 print('*~~'*20)
 
-#EXERCÍCIO 7
+#EXERCÍCIO 7: Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média
 notas = 0
 media = 0
 nota = []
