@@ -2,7 +2,14 @@
 from random import randint
 from time import sleep
 
-student = ['rivaldo', 'raimunda', 'felipe','maria']
+student = []
+c = 1
+while True:
+    student.append(input(f'qual p {c}º aluno: '))
+    if c == 4:
+        break
+    c += 1
+
 print(f'dos estudante {student} a ordeme sorteada foi')
 sleep(1)
 for s in range(0,len(student)):
