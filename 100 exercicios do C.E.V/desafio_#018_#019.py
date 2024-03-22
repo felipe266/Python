@@ -16,7 +16,13 @@ print('*~~'*20)
 #EXERCÍCIO 19: Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.
 import random
 
-student = ('rivaldo', 'raimunda', 'felipe','maria')
+student = []
+c = 1
+while True:
+    student.append(input(f'qual o {c}º: '))
+    if c == 4:
+        break
+    c += 1
 chosen = random.randint(0,3)
 
 print(f'dos alunos {student} o sorteado foi {student[chosen]}')
