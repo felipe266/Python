@@ -21,3 +21,11 @@ for s in range(0,len(student)):
 print('*~~'*20)
 
 #EXERCÍCIO 21: Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
+
+import pygame
+
+pygame.init()
+pygame.mixer.music.load('teste.mp3') # Tentei com vários arquivos diferentes
+pygame.mixer.music.play()
+input()
+pygame.event.wait()
