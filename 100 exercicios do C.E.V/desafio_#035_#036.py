@@ -1,9 +1,9 @@
 #EXERCÍCIO 35: Desenvolva um programa que leia o comprimento de três retas e diga ao usuário se elas podem ou não formar um triângulo.
-l1 = str(input('1º lado do triângulo[cm]: '))
+l1 = str(input('1º lado do triângulo[cm]: ').strip())
 l1 = float(l1.replace(',', '.'))
-l2 = str(input('1º lado do triângulo[cm]: '))
+l2 = str(input('1º lado do triângulo[cm]: ').strip())
 l2 = float(l2.replace(',', '.'))
-l3 = str(input('1º lado do triângulo[cm]: '))
+l3 = str(input('1º lado do triângulo[cm]: ').strip())
 l3 = float(l3.replace(',','.'))
 
 if l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2:
