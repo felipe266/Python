@@ -9,7 +9,7 @@ print(f'a soma dos pares é {s}')
 
 #EXERCÍCIO 51: Desenvolva um programa que leia o primeiro termo e a razão de uma PA. No final, mostre os 10 primeiros termos dessa progressão.
 num = int(input('1º termo da P.A: ').strip())
-r = int(input('razão P.A').strip())
+r = int(input('razão P.A: ').strip())
 
 t = 1
 for n in range(num, num +(11-1)*r, r):
