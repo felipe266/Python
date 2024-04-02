@@ -2,7 +2,7 @@
 from datetime import date
 ano = int(input('seu ano de nascimento? '))
 
-idade = date.year() - ano
+idade = date.today().year - ano
 
 if idade < 18:
     print(f'sua idade é {idade} ainda vai se alistar')
