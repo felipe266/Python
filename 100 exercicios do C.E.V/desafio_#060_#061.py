@@ -18,4 +18,5 @@ pa = n = 1
 while pa != num + (9)*r:
     pa = num + (n-1)*r
     n += 1
-    print(pa)
+    print(f'{pa} ⇒',end=' ')
+print('FIM')
