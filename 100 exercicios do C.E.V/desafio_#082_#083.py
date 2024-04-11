@@ -6,9 +6,9 @@ n = 1
 while True:
     numeros.append(int(input(f'O {n} número: ').strip()))
     cont = str(input('quer continuar? [S/N]').strip())
-    n += 1
     if cont in 'nN':
         break
+    n += 1
 
 for m in range(0,len(numeros)):
     if numeros[m]%2 == 0:
