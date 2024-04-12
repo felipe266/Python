@@ -26,3 +26,17 @@ while True:
         print('não existe essa pessoa')
     else:
         print(f'A nota de {pessoas[no][0]} é de [{pessoas[no][1]} ,{pessoas[no][2]}]')
+
+print('~='*15)
+
+#EXERCÍCIO 90: Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo da estrutura na tela.
+aluno = {}
+aluno['nome'] = str(input('Nome: ').strip())
+aluno['média'] = float(input('Média: ').strip().replace(',','.'))
+if aluno['média'] < 6:
+    aluno['situação'] = 'reprovado'
+elif aluno['média'] >= 6:
+    aluno['situação'] = 'aprovado'
+print('='*15)
+for k,v in aluno.items():
+    print(f'{k} é igual a {v}')
