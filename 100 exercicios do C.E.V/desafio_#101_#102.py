@@ -25,12 +25,21 @@ while True:
 print('~='*20)
 
 #EXERCÍCIO 102: Crie um programa que tenha uma função fatorial() que receba dois parâmetros: o primeiro que indique o número a calcular e outro chamado show, que será um valor lógico (opcional) indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
-def fatorial(num,show = 'true'):
+def fatorial(num,show):
+    """
+    fatorial(num,show=false)
+    ->calcular o fatorial de um número:
+        :param num: o número
+        :param show: (opcional) mostra ou nao a conta
+    """
     fat = 1
+    print(show)
     for n in range(num,0,-1):
         if show == 'true':
             print(f'{n} {'x'if n > 1 else '='}', end=' ')
         fat *= n
     print(fat)
 
+
+help(fatorial)
 fatorial(int(input('1 número: ').strip()),str(input('true para mostrar a multiplicação false só para o resultado: ').lower()))
