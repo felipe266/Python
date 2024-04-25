@@ -11,9 +11,9 @@ def leiaDinheiro(preco):
                     p = str(input(preco).replace(',','.').strip())
                     m = 0
                 else:
+                    if m == len(p)-1:
+                        break
                     m +=1
-                if m == len(p)-1:
-                    break
 
             break
     return float(p)
