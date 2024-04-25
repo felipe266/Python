@@ -23,7 +23,7 @@ def metade(n=0, formata = True):
 
 def resumo(n,a,d):
     print('='*30)
-    print(f'Lista de operações'.center(30))
+    print('Lista de operações'.center(30))
     print('='*30)
 
     frases = (f'Preço analisado: \t{moeda(n)}',
