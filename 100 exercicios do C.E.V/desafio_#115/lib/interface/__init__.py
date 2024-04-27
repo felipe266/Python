@@ -1,5 +1,5 @@
 import time
-
+from lib.arquivo import *
 def linha(tam = 40):
     return ('='*tam)
 
@@ -28,14 +28,23 @@ def opcao(opcao = ()):
             print(f'\033[0;32m{c}\033[m - \033[0;34m{p}\033[m')
             c += 1
         print(linha())
-        op = erroint('Sua opção: ')
-        time.sleep(1)
+        op = erroint('\033[0;32mSua opção: \033[m')
+        arq = 'cadastro.txt'
+        if op == 1:
+            time.sleep(1)
+            alinhamento('Pessoas cadastradas'.upper())
+            if arqexiste(arq) == False:
+                criararquivo(arq)
+            lerarquivo(arq)
+            print()
+        if op == 2:
+            alinhamento('Cadastrando pessoas')
+            cadastrar('Nome: ', 'Idade:', arq = arq)
         if op == 3:
+            time.sleep(1)
             alinhamento('Saindo do sistema')
             break
         if 0 >= op or op > len(opcao):
             print('\033[0;31mDigite uma opção válida\033[m') 
-        else:
-            alinhamento(f'Opção {op}')
         time.sleep(1)
     return op
