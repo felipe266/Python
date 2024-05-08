@@ -30,45 +30,50 @@ class Historico:
         
 
 class Conta:
-    def __init__(self,numero, cliente, saldo, limite) -> None:
-        self.numero = numero
-        self.titular = cliente
-        self.saldo = saldo
-        self.limite = limite
-        #ao colocar o '__' deixa o atributo "privado", assim esses atributos não poderam ser mechidos fora da class,porém apenas '_' já é entre programadores
+    
+    __slots__ = ['_numero', '_titular', '_saldo', '_limite','historico','_identificador']
+    _total_contas = 1
+    
+    def __init__(self,numero, cliente, saldo, limite):
+        self._numero = numero
+        self._titular = cliente
+        self._saldo = saldo
+        self._limite = limite
         self.historico = Historico()
+        self._identificador = Conta._total_contas
+        Conta._total_contas += 1
+        #ao colocar o '__' deixa o atributo "privado", assim esses atributos não poderam ser mechidos fora da class,porém apenas '_' já é entre programadores
     
     def depositar(self):
         valor = erro_num('Digite uma valor para depositar: ')
-        self.saldo += valor
+        self._saldo += valor
         self.historico.transacao.append(f'Deposito de {valor}')
 
     def sacar(self):
         while True:
             valor = erro_num('Digite um valor para sacar: ')
-            if valor > self.saldo:
+            if valor > self._saldo:
                 print(f'\033[0;31mO valor de {valor} excedi o seu saldo {self.saldo}\033[m')
             else:
-                self.saldo -= valor
+                self._saldo -= valor
                 self.historico.transacao.append(f'Saque de {valor}')
                 break
     
     def transferir_para(self,destino,remetente):
         while True:
             valor = erro_num('Digite uma valor para transferir: ')
-            if valor > self.saldo:
-                print(f'\033[0;31mO valor de {valor} excedi o seu saldo {self.saldo}\033[m')
+            if valor > self._saldo:
+                print(f'\033[0;31mO valor de {valor} excedi o seu saldo {self._saldo}\033[m')
             else:
-                remetente.saldo -= valor
-                destino.saldo += valor
+                remetente._saldo -= valor
+                destino._saldo += valor
                 if destino:
-                    destino.historico.transacao.append(f'Transferencia de {valor} por {remetente.titular.nome} {remetente.titular.sobrenome}')
-                    pass
-                self.historico.transacao.append(f'Transferencia de {valor} para {destino.titular.nome} {destino.titular.sobrenome}')
+                    destino.historico.transacao.append(f'Transferencia de {valor} por {remetente._titular.nome} {remetente._titular.sobrenome}')
+                self.historico.transacao.append(f'Transferencia de {valor} para {destino._titular.nome} {destino._titular.sobrenome}')
                 break
     
     def extrato(self):
-        print(f'nome: {self.titular.nome} {self.titular.sobrenome} \nCpf: {self.titular.cpf} \nSaldo: {self.saldo}')
+        print(f'informações da conta {self._identificador} \nSaldo: {self._saldo}')
 
 
 cliente1 = Cliente('Felipe','Rodrigues', '111-111-111-11')
