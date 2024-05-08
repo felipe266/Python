@@ -35,6 +35,7 @@ class Conta:
         self.titular = cliente
         self.saldo = saldo
         self.limite = limite
+        #ao colocar o '__' deixa o atributo "privado", assim esses atributos não poderam ser mechidos fora da class,porém apenas '_' já é entre programadores
         self.historico = Historico()
     
     def depositar(self):
