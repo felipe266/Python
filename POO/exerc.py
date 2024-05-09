@@ -11,6 +11,7 @@ def erro_num(msg):
 
 
 class Cliente:
+    
     def __init__(self,nome='<desconhecido>', sobrenome='<desconhecido>', cpf='000-000-000-00') -> None:
         self.nome = nome
         self.sobrenome = sobrenome
@@ -18,6 +19,7 @@ class Cliente:
  
  
 class Historico:
+    
     def __init__(self):
          self.data_abertura = datetime.date.today()
          self.transacao = []
