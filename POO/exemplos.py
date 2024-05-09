@@ -51,20 +51,20 @@ class Conta():
         else:
             self._saldo = saldo
     #métado estático(é usado quando não deseja receber nem um parâmetro e só envia vairaveis inicializados ou return)---------------
-    @staticmethod
+    '''@staticmethod
     def tota_contas() -> str:
-        return Conta._total_contas
+        return Conta._total_contas'''
     
-    #métado de classes(é usado para receber para receber parâmetros e só envia variaveis inicializados)-------------
-    ''' @classmethod
+    #métado de classes(servem para definir um métado que opera na class e não na instancia)-------------
+    @classmethod
     def tota_contas(cls):
-        return cls._total_contas'''
+        return cls._total_contas
 
 
 c = Conta(10000)
 c.saudo = -300
 print(c.tota_contas())
 c2 = Conta(1500)
-print(c2.tota_contas())
-#↓ se colocassemos c2 na dentro do paréntese funcionara só com @classmethod
+print(c.tota_contas())
+#classmethod e staticmethod são as mesmas bem parecidos so que o 1 é dentro da class e o outro é fora
 print(Conta.tota_contas())
