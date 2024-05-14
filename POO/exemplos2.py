@@ -1,10 +1,14 @@
-class Funcionario:
+import abc
+
+class Funcionario(abc.ABC):
     
     def __init__(self, nome, cpf, salario):
         self._nome = nome
         self._cpf = cpf
         self._salario = salario
     
+    #ao colocarmos isso, todas as classes que herdarem de funcionario(filhas) será obrigatório da def bonificacao
+    @abc.abstractclassmethod
     def bonificacao(self):
         return self._salario * 0.1
 

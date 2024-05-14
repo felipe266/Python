@@ -12,7 +12,7 @@ def erro_num(msg):
 
 class Cliente:
     
-    def __init__(self,nome='<desconhecido>', sobrenome='<desconhecido>', cpf='000-000-000-00') -> None:
+    def __init__(self,nome='<desconhecido>', sobrenome='<desconhecido>', cpf='000-000-000-00')
         self.nome = nome
         self.sobrenome = sobrenome
         self.cpf = cpf
