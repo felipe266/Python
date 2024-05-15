@@ -25,8 +25,10 @@ def saldo_total():
             saldo -= valor
         else:
             saldo += valor
-    return saldo
+    print(f'O saldo total ficou {saldo}')
 
 
 def listas():
-    print('lista de trasaõa: ', lista_transacao,'lisata de categorias: ',lista_categorias)
+    print('Listas de categorias:')
+    for n,l in enumerate(lista_categorias):
+        print(f' {n} - {l.nome}')
