@@ -1,5 +1,6 @@
 import time
 from lib.arquivo import *
+
 def linha(tam = 40):
     return ('='*tam)
 

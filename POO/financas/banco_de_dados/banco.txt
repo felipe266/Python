@@ -1,2 +1,4 @@
-salario;5000.0;receita
-aluguel;1500.0;despesas
+salario;750.00;receita
+cadeira;750.00;despesas
+salario;50.00;receita
+pasta termica;47.00;despesas
