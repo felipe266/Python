@@ -32,3 +32,32 @@ def listas():
     print('Listas de categorias:')
     for n,l in enumerate(lista_categorias):
         print(f' {n} - {l.nome}')
+
+
+def erro_int(text):
+    while True:
+        try:
+            n = int(input(text))
+        except (TypeError,ValueError):
+            print('\033[0;31mErro número inválido\033[m')
+        else: 
+            return n
+
+
+def erro_float(text):
+    while True:
+        try:
+            n = float(input(text))
+        except (TypeError,ValueError):
+            print('\033[0;31mErro número inválido\033[m')
+        else: 
+            return n
+
+
+def erro_escolha(num, tam):
+    while True:
+        if num > tam or num < 1:
+            print('\033[0;31mErro número não condiz com as opções\033[m')
+            num = erro_int('Escolha uma opção: ')
+        else:
+           return num

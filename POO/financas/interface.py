@@ -11,17 +11,6 @@ def alinhamento(nome):
     print(f'{nome}'.center(45))
     linha()
 
-
-def erro_int(text):
-    while True:
-        try:
-            n = int(input(text))
-        except (TypeError,ValueError):
-            print('\033[0;31mErro número inválido\033[m')
-        else: 
-            return n
-
-
 def erro_float(text):
     while True:
         try:
