@@ -2,3 +2,4 @@ salario;750.00;receita
 cadeira;750.00;despesas
 salario;50.00;receita
 pasta termica;47.00;despesas
+salario;150.00;receita
