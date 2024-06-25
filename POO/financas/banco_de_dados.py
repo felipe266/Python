@@ -3,7 +3,8 @@ from categoria import Categoria
 
 def criar_arquivo(nome):
     try:
-        arq = open(f'POO/financas/banco_de_dados/{nome}.txt', 'wt+')
+        #POO/financas/
+        arq = open(f'banco_de_dados/{nome}.txt', 'wt+')
         arq.close()
     except:
         print('\033[0;31mHouve em erro na criação do arquivo\033[m')
@@ -13,7 +14,8 @@ def criar_arquivo(nome):
 
 def cadastrar(valor, categoria, observacao, arq=0):
         try:
-            arquivo = open(f'POO/financas/banco_de_dados/{arq}.txt','at')
+            #POO/financas/
+            arquivo = open(f'banco_de_dados/{arq}.txt','at')
             arquivo.write(f'{observacao};{valor:.2f};{categoria.nome}\n')
         except:
             print('\033[0;31mErro em cadastrar\033[m')
@@ -23,7 +25,8 @@ def cadastrar(valor, categoria, observacao, arq=0):
 
 def arqexiste(nome):
     try:
-        arq = open(f'POO/financas/banco_de_dados/{nome}.txt','rt')
+        #POO/financas/
+        arq = open(f'banco_de_dados/{nome}.txt','rt')
         arq.close()
     except FileNotFoundError:
         return False
@@ -33,7 +36,8 @@ def arqexiste(nome):
 
 def mostra_banco(nome):
     try:
-        arq = open(f'POO/financas/banco_de_dados/{nome}.txt','rt')
+        #(POO/financas/) coloque isso quando assecar o arquivo projetos
+        arq = open(f'banco_de_dados/{nome}.txt','rt')
     except:
         print('\033[0;31mErro em exibir o arquivo\033[m')
     else:
@@ -52,7 +56,8 @@ def mostra_banco(nome):
 
 def mostra_saldo(nome):
     try:
-        arq = open(f'POO/financas/banco_de_dados/{nome}.txt','rt')
+        #POO/financas/
+        arq = open(f'banco_de_dados/{nome}.txt','rt')
     except:
         print('\033[0;31mErro em exibir o arquivo\033[m')
     else:

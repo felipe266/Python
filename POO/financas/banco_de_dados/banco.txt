@@ -3,3 +3,6 @@ cadeira;750.00;despesas
 salario;50.00;receita
 pasta termica;47.00;despesas
 salario;150.00;receita
+salario;100.00;receita
+academia;70.00;despesas
+salario;100.00;receita
