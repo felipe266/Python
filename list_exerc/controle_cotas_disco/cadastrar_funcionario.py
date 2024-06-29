@@ -3,6 +3,8 @@ from criando_banco import criar_arquivo, arq_existe
 
 
 def cadastrar():
+    dados = []
+    temp = []
     while True:
         if arq_existe():
             try:
