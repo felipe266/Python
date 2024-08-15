@@ -1,2 +1,2 @@
-# Python do Básico
-Aqui estarão todos os projetos de python de nivel básico
+# Exercícios de Python
+Aqui estarão todos os projetos de python de nivel básico, medio e avançado
