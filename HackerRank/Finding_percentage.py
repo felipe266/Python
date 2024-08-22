@@ -2,7 +2,9 @@ n = int(input('number of parameters: '))
 student_marks = {}
 for _ in range(n):
     name, *line = input('student: ').split()
-    scores = list(map(float, line))
+    print(line)
+    scores = list(map(int, line))
+    print(scores)
     #MAP() aplica uma fução em todos os intens de uma lista, ou seja aplica a função float na lista line
     student_marks[name] = scores
 
