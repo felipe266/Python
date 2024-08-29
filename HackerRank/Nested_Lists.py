@@ -6,8 +6,7 @@ def lowest(st):
         else:
             if num > itens[n][1]:
                 num = itens[n][1]
-    return num
-       
+    return num  
 
 q = int(input('Number of parameters: ').strip())
 

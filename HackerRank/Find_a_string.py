@@ -1,6 +1,5 @@
 def count_substring(string, sub_string):
     conjunto = []
-    f = ''
     for n in range(0, len(string)):
         conjunto.append(string[n:][:len(sub_string)])
     return conjunto.count(sub_string)

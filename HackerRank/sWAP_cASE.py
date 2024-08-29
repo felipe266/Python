@@ -2,7 +2,7 @@ def swap_case(s):
     f = ''
     for n in range(len(s)):
         if s[n].isupper():
-           f += s[n].lower()
+            f += s[n].lower()
         else:
             f += s[n].upper()
     return f
