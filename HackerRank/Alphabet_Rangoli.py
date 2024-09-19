@@ -8,5 +8,7 @@ def print_rangoli(size):
     for i in range(1, size):
         c = c.replace(f'{escolhido[i-1]}-','').replace(f'{escolhido[i]}-','')
         print((c).rjust((size*2)-2,'-')+escolhido[i]+(c[::-1]).ljust((size*2)-2,'-'))
+
+
 n = int(input())
 print_rangoli(n)

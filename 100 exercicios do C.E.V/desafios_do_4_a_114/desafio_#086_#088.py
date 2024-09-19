@@ -34,7 +34,7 @@ jogos = []
 temp = []
 for n in range(0,quant):
     for m in range(0,6):
-          temp.append(randint(0,60))
+        temp.append(randint(0,60))
     jogos.append(temp[:])
     temp.clear()
 
